@@ -2,6 +2,13 @@
 #include <math.h>
 
 
+/*
+ * gcd()
+ * find the greatest common divisor (gcd) of two integers.
+ *
+ * input: int x, y
+ * output: gcd of x and y
+ */
 int gcd(int x, int y)
 {
 	int remainder;
