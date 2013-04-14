@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+
 /*
  * perfect()
  * determines if parameter number is a perfect number.

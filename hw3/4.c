@@ -3,8 +3,8 @@
 
 int main()
 {
-	int ans, in;
-	char yn, n[1];
+	int ans, in, c;
+	char yn;
 	srand(time(NULL));
 
 	/* Let's start the game! */
@@ -16,12 +16,13 @@ int main()
 		printf("Can you guess my number?\n");
 		printf("Please enter your first guess.\n");
 
-		/* guess until it's right */
+		/* guess until you get it right */
 		while (1) {
 			while ( !scanf("%d", &in) ) {
 				printf("Error: Please enter a integer.\n");
-				scanf("%s", n);  //throw away the rest input to prevent infinite loop
+				while ( (c = getchar()) != '\n' && c != EOF);  //remember to clear the input buffer!
 			}
+
 			if (in > ans) {  //too high
 				printf("Too high. Try again.\n");
 
@@ -34,11 +35,16 @@ int main()
 
 				/* ask the user to play again */
 				while (1) {
-					do {
-						scanf("%c", &yn);
-					} while ( yn == 10 || yn == 13 || yn == 32 );  //ignore the Line feeds, Carriage returns and Spaces which might be scanned as a character and occur errors
-					if (yn == 'n') return 0;
-					else if (yn == 'y') break;
+					scanf("%c", &yn);
+					while((c = getchar()) != '\n' && c != EOF);
+					if (yn == 'n') {
+						printf("bye\n");
+						return 0;
+					}
+					else if (yn == 'y') {
+						printf("\n");
+						break;
+					}
 					else printf("Please enter y or n: ");
 				}
 			}
