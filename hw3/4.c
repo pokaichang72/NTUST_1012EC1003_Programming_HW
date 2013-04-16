@@ -25,7 +25,7 @@ int main()
 		while (!correct) {
 			while ( !scanf("%d", &in) ) {
 				printf("Error: Please enter a integer.\n");
-				while ( (c = getchar()) != '\n' && c != EOF);  //remember to clear the input buffer!
+				while ( (c = getchar()) != '\n' && c != EOF );  //remember to clear the input buffer!
 			}
 
 			if (in > ans) {  //too high!
@@ -42,7 +42,7 @@ int main()
 				/* ask the user to play again */
 				while (1) {
 					scanf("%c", &yn);  //get input
-					while((c = getchar()) != '\n' && c != EOF);  //clear the input buffer
+					while( (c = getchar()) != '\n' && c != EOF );  //clear the input buffer
 					if (yn == 'n') {
 						printf("bye!\n");
 						return 0;
