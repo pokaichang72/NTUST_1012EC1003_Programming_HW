@@ -41,8 +41,8 @@ int main()
 
 				/* ask the user to play again */
 				while (1) {
-					scanf("%c", &yn);  //get input
 					while( (c = getchar()) != '\n' && c != EOF );  //clear the input buffer
+					scanf("%c", &yn);  //get input
 					if (yn == 'n') {
 						printf("bye!\n");
 						return 0;
