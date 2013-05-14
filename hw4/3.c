@@ -39,11 +39,11 @@ float shuffle(int wDeck[4][13])
 	for (i=0; i<4; i++) {
 		for (j=0; j<13; j++) {
 			if (!swapped[i][j]) {
-				if ( (row=rand()%4) != i || (column=rand()%13) != j ) {
-					swap(&wDeck[i][j], &wDeck[row][column]);
-					swapped[i][j] = 1;
-					swapped[row][column] = 1;
-				}
+				row=rand()%4;
+				column=rand()%13;
+				swap(&wDeck[i][j], &wDeck[row][column]);
+				swapped[i][j] = 1;
+				swapped[row][column] = 1;
 			}
 		}
 	}
