@@ -62,7 +62,14 @@ int main()
 	int deck[4][13], i;
 	for (i=0; i<52; i++) deck[i/13][i%13] = i+1;  // initialize a deck of cards
 
-	printf("Time spent during shuffle: %f sec.", shuffle(deck));
+	/* Print the deck */
+	printf("\n\n       1   2   3   4   5   6   7   8   9  10  11  12  13\n");
+	for (i=0; i<52; i++) {
+		if (i%13 == 0) printf("\n%2d    ", (i/13)+1);
+		printf("%2d  ", deck[i/13][i%13]);
+	}
+
+	printf("\n\nTime spent during shuffle: %f sec.", shuffle(deck));
 
 	/* Print the resault */
 	printf("\n\n       1   2   3   4   5   6   7   8   9  10  11  12  13\n");

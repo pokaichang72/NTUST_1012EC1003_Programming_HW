@@ -6,8 +6,11 @@
  * hanoi()
  * 計算將 level 階河內塔從 source 移到 target, 利用 temp 作暫存, 所需的步驟, 並印出過程.
  *
- * input: int level(階數), char source(柱一：原柱代號), char target(柱二：目標柱代號), char temp(柱三：暫存柱代號)
- * output: 完成移動需要的步驟數 steps
+ * level: 階數
+ * source: 原柱代號
+ * target: 目標柱代號
+ * temp: 暫存柱代號
+ * return: 完成移動需要的步驟數 steps
  */
 int hanoi(int level, char source, char target, char temp)
 {

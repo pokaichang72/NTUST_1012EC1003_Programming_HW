@@ -8,7 +8,7 @@ int scan_data(char *o, float *v)
 		scanf("%c", o);  // get operator
 	} while ( *o == 10 || *o == 13 || *o == 32 );  // ignore the Line feeds, Carriage returns and Spaces which might be scanned as a character and occur errors
 
-	if (*o == 'q') return 0;  //terminate if input 'q' detected
+	if (*o == 'q') return 0;  // terminate if input 'q' detected
 
 	scanf("%f", v);  // get operand
 	return 1;
